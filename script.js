@@ -3,7 +3,7 @@ const term = document.getElementById("term");
 const rate = document.getElementById("rate");
 const calculateBtn = document.getElementById("calculateBtn");
 const resultsBox = document.getElementById("resultsBox");
-const resultsPlaceholder = document.getElementById("resultsPlaceholder");
+const resultsIntro = document.getElementById("resultsIntro"); // Changed from resultsPlaceholder
 const monthlyRepay = document.getElementById("monthlyRepay");
 const totalRepay = document.getElementById("totalRepay");
 const clearAll = document.getElementById("clearAll");
@@ -41,7 +41,8 @@ calculateBtn.addEventListener("click", () => {
   monthlyRepay.textContent = "£" + monthlyPayment.toFixed(2);
   totalRepay.textContent = "£" + totalPayment.toFixed(2);
 
-  resultsPlaceholder.classList.add("hidden");
+  // Hide the intro (image + text) and show the calculation results
+  resultsIntro.classList.add("hidden");
   resultsBox.classList.remove("hidden");
 });
 
@@ -52,6 +53,7 @@ clearAll.addEventListener("click", () => {
   rate.value = "";
   document.querySelector("input[value='repayment']").checked = true;
 
+  // Show the intro (image + text) and hide the calculation results
   resultsBox.classList.add("hidden");
-  resultsPlaceholder.classList.remove("hidden");
+  resultsIntro.classList.remove("hidden");
 });

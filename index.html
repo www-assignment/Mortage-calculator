@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mortgage Calculator</title>
   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -61,20 +62,24 @@
     </div>
 
     <!-- Button -->
-    <button id="calculateBtn" class="calculate-btn">
-      <img src="./assets/images/icon-calculator.svg" alt="">
-      Calculate Repayments
-    </button>
+<button id="calculateBtn" class="calculate-btn">
+  <i class="fas fa-calculator"></i>
+  Calculate Repayments
+</button>
   </div>
 
   <!-- RIGHT SIDE RESULTS -->
   <div class="results-section">
-    <div class="results-placeholder" id="resultsPlaceholder">
-      <img src="OIP.webp" class="img">
-      
+    
+    <div class="results-intro" id="resultsIntro">
+      <img src="OIP.webp" class="empty-img">
+      <h4>Results shown here</h4>
+      <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+    </div>
 
+    <!-- Actual calculation results - hidden by default -->
     <div class="results-box hidden" id="resultsBox">
-      <h4>Your results</h4>
+      <h4>Your Results</h4>
       <p>Your results are shown below based on the information you provided. To adjust the result, edit the form and click "calculate repayments" again.</p>
 
       <div class="result-card">
